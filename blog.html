@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="blog.css">
+    <title>Blog of Abdul Mohaimin | #nam_c</title>
+</head>
+
+<body ng-app="app">
+    <div class="wrapper" ng-controller="bloggerController">
+        <section id="navbar">
+            <div class="nav">
+                <div class="brand-logo">
+                    <img src="namc.png" alt="Abdul Mohaimin Image">
+                </div>
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="index.html">Go to Profile&nbsp;<i class="material-icons">trending_flat</i></a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="featured" ng-if="featuredPost">
+            <div class="featured">
+                <h1>Featured Post</h1>
+                <div class="featured-post">
+                    <div class="featured-post-thumbnail">
+                        <img src="https://picsum.photos/300/200" alt="Sample Image">
+                    </div>
+                    <div class="featured-post-content">
+                        <div class="d-pc featured-post-date">March 09, 2021</div>
+                        <div class="featured-post-title">
+                            <h2>{{featuredPost.title}}</h2>
+                        </div>
+                        <div class="featured-post-body">
+                            <article>{{stripHtml(featuredPost.content)}}</article>
+                        </div>
+                        <div class="d-mobile featured-post-date">March 09, 2021</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="posts">
+            <div class="posts">
+                <h1>All Posts</h1>
+                <div class="posts-container">
+                    <div class="post" ng-repeat="post in posts">
+                        <div class="post-thumbnail">
+                            <img src="https://picsum.photos/300/200" alt="Sample Image">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-title">
+                                <h2>{{post.title}}</h2>
+                            </div>
+                            <div class="post-body">
+                                <article ng-bind-html="renderHtml(post.content)"></article>
+                            </div>
+                            <div class="post-date">March 09, 2021</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="end-credit">Made with&nbsp;<i title="love"
+                class="material-icons heart">favorite</i>&nbsp;by&nbsp;<abbr
+                title="N Abdul Mohaimin Creations">#nam_c</abbr></div>
+
+        <div class="socials">
+            <div class="social-item">
+                <a href="https://www.facebook.com/mohaimin95" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+
+            <div class="social-item">
+                <a href="https://www.instagram.com/mohaimin95" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+
+            </div>
+
+            <div class="social-item">
+                <a href="https://twitter.com/namohaimin" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+
+            </div>
+            <div class="social-item">
+                <a href="https://www.linkedin.com/in/mohaimin95/" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+
+            </div>
+
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>
