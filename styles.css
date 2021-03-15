@@ -14,6 +14,7 @@
 body {
 	background-color: var(--primary-background);
 	min-width: fit-content;
+
 }
 #darkMode {
 	cursor: pointer;
