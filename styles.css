@@ -10,6 +10,15 @@
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
+a {
+	color: var(--secondary-color);
+	text-decoration: none;
+}
+a:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
 
 body {
 	background-color: var(--primary-background);
