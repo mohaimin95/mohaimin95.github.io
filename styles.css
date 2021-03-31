@@ -10,6 +10,9 @@
 	margin: 0;
 	font-family: 'Montserrat', sans-serif;
 }
+body {
+	font-size: 90%;
+}
 a {
 	color: var(--secondary-color);
 	text-decoration: none;
@@ -174,8 +177,7 @@ body {
 /*main content*/
 .main-content {
 	box-sizing: border-box;
-	margin-top: 4rem;
-	margin-left: 12px;
+	margin: 4rem 12px;
 	color: var(--text-color);
 }
 
@@ -242,7 +244,7 @@ body {
 .skill-progress {
 	margin-top: .2rem;
 	border-bottom: .5rem solid var(--secondary-color);
-	width: 90%;
+	width: 100%;
 }
 .ppp::-webkit-progress-bar {background-color: var(--primary-hover-background); width: 100%;}
 .ppp {background-color: var(--primary-hover-background);}
@@ -302,6 +304,9 @@ abbr {
 
 @media only screen and (min-width: 768px) {
 	/* For desktop: */
+	body {
+		font-size: 100%;
+	}
 	.d-md-none {
 		display: none;
 	}
