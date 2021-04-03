@@ -1,0 +1,153 @@
+:root {
+    --primary-bg-color: #fff;
+    --primary-txt-color: #000;
+    --secondary-color: #0bceae;
+    --navbar-width: 4rem;
+    --navbar-bg-color: #212026;
+    --navbar-txt-color: #fff
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}
+
+.nav {
+    background-color: var(--navbar-bg-color);
+    color: var(--navbar-txt-color);
+    width: 100%;
+    height: var(--navbar-width);
+    position: fixed;
+    bottom: 0;
+}
+
+.content {
+    width: 100%;
+    height: max-content;
+    padding-bottom: var(--navbar-width);
+}
+
+.container {
+    display: block !important;
+    text-align: justify;
+}
+
+.brand {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    height: var(--navbar-width);
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menu-item {
+    display: flex;
+    height: var(--navbar-width);
+    width: var(--navbar-width);
+    justify-content: center;
+    align-items: center;
+}
+
+.content .container {
+    padding: 12px;
+}
+
+/* ************** can remove while developing (this is css for the content which I made) ***************** */
+
+code {
+    font-family: Consolas, "courier new";
+    color: crimson;
+    background-color: #f1f1f1;
+    padding: 2px;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+.root_img {
+    width: 100%;
+}
+.platforms {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
+}
+.platform-item {
+    max-width: 100%;
+
+}
+.platform-item img {
+    width: 100%;
+
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+/* ******************************************** */
+
+@media only screen and (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav {
+        width: var(--navbar-width);
+        height: 100vh;
+        position: fixed;
+    }
+    .content {
+        width: 100%;
+        height: 100vh;
+        padding-left: var(--navbar-width);
+    }
+    .brand {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--secondary-color);
+        height: var(--navbar-width);
+        width: var(--navbar-width);
+    }
+    .menu {
+        display: flex;
+        height: 100%;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .menu-item {
+        cursor: pointer;
+    }
+    .menu-item:hover {
+        transition: .2s;
+        background-color: #333;
+    }
+    .menu-item:active {
+        background-color: #222;
+    }
+    /* ************** can remove while developing (this is css for the content which I made) ***************** */
+    .root_img {
+        width: auto;
+    }
+    /* ***************************************** */
+}
