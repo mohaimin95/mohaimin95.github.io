@@ -1,0 +1,37 @@
+:root {
+    --background-color:#fffc01;
+    --text-color:#000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* nav */
+
+nav {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+nav .brand {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    letter-spacing: .25rem;
+    cursor: pointer;
+}
+.content {
+    border:1px solid red;
+    height: calc(100vh - 4rem);
+}
