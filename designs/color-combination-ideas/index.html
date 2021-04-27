@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Combination Ideas | #nam_c</title>
+    <meta name="description"
+        content="Page gives you the idea to inspire from these colors for your UI. It can be used for web, mobile etc., Click the above like and start inspiring and creative. Created by #nam_c with love from India.">
+    <meta name="keywords"
+        content="color combinations picker | color picker | ui color ideas | ideas for ui | ui ideas | #nam_c designs">
+</head>
+
+<body>
+    <div class="container">
+        <div id="increment" title="Click here for next combination." class="content">
+            <h1 class="color-code" id="primaryColor">#0c6d76</h1>
+            <p>أبثل</p>
+            <p>अब्दुल</p>
+            <h5>అబ్దుల్</h5>
+            <h4>അബദൂല്</h4>
+            <h3>ಅಬ್ದುಲ್</h3>
+            <h2>அப்துல்</h2>
+            <h1>Abdul</h1>
+        </div>
+        <nav id="decrement" title="Click here for previous combination.">
+            <h1>Mohaimin</h1>
+            <h2>முஹைமின்</h2>
+            <h3>ಮುಹೈಮಿನ್</h3>
+            <h4>മുഹൈമിൻ</h4>
+            <h5>ముహైమిన్</h5>
+            <p>मुहामिन</p>
+            <p>مهيمن</p>
+            <h1 class="color-code" id="secondaryColor">#ea746b</h1>
+        </nav>
+    </div>
+    <script>
+        const appHeight = () => {
+            const doc = document.documentElement
+            doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+        }
+        window.addEventListener('resize', appHeight)
+        appHeight()
+        let colorSets = [
+            {
+                primary: "#0c6d76",
+                secondary: "#ea746b",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+
+            {
+                primary: "#212026",
+                secondary: "#0bceae",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+            {
+                primary: "#051d4b",
+                secondary: "#f98257",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#08233d",
+                secondary: "#f3a6be",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#e1bb15",
+                secondary: "#21232e",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#3a33b1",
+                secondary: "#f7f7f7",
+                primaryText: "#fff",
+                secondaryText: "#000",
+            },
+
+            {
+                primary: "#202020",
+                secondary: "#00df72",
+                primaryText: "#fff",
+                secondaryText: "#000",
+            },
+            {
+                primary: "#1e1e28",
+                secondary: "#ef2a3a",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+
+            {
+                primary: "#1a1918",
+                secondary: "#a8c6c6",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+            {
+                primary: "#fff",
+                secondary: "#0bceae",
+                primaryText: "#000",
+                secondaryText: "#fff",
+            },
+
+            {
+                primary: "#f2e1dd",
+                secondary: "#f7f7f7",
+                primaryText: "#000",
+                secondaryText: "#000",
+            },
+
+            {
+                primary: "#6593a6",
+                secondary: "#58595b",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#ff5b79",
+                secondary: "#262626",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+            {
+                primary: "#01717d",
+                secondary: "#46b6a8",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#f23d3d",
+                secondary: "#04b2d9",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+            {
+                primary: "#40282e",
+                secondary: "#f78076",
+                primaryText: "#fff",
+                secondaryText: "#fff",
+            },
+
+
+
+
+
+        ]
+        let index = 0;
+        let incrementBtn = document.getElementById("increment");
+        let decrementBtn = document.getElementById("decrement");
+        let primaryColor = document.getElementById("primaryColor");
+        let secondaryColor = document.getElementById("secondaryColor");
+        incrementBtn.addEventListener("click", () => {
+            if (colorSets.length > (index + 1)) index++;
+            else index = 0;
+
+            refreshProperties();
+        })
+
+        decrementBtn.addEventListener("click", () => {
+            if ((index - 1) >= 0) index--;
+            else index = colorSets.length - 1;
+
+            refreshProperties();
+        })
+        const refreshProperties = () => {
+            primaryColor.innerText = colorSets[index].primary;
+            secondaryColor.innerText = colorSets[index].secondary;
+            document.documentElement.style.setProperty("--primary-color", `${colorSets[index].primary}`);
+            document.documentElement.style.setProperty("--secondary-color", `${colorSets[index].secondary}`);
+            document.documentElement.style.setProperty("--primary-text-color", `${colorSets[index].primaryText}`);
+            document.documentElement.style.setProperty("--secondary-text-color", `${colorSets[index].secondaryText}`);
+        }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ5QXDKVPF"></script>
+    <script>
+        function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-NJ5QXDKVPF");
+    </script>
+</body>
+
+</html>
