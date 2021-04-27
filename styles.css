@@ -257,7 +257,7 @@ body {
 .ppp::-moz-progress-bar {background-color: var(--secondary-color) !important;}
 .ppp {color: var(--secondary-color);}
 .ppp {
-
+	display: grid;
 	width: 100%;
 	height: .5rem;
 }
