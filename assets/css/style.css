@@ -1,0 +1,23 @@
+:root {
+    --primary-color: #28e98c;
+    --bgcolor: #1f1f1f;
+    --textcolor: #fff;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+*::after, *::before {
+    box-sizing: border-box;
+}
+body {
+    color-scheme: dark;
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    min-height: 100vh;
+}
