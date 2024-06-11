@@ -249,6 +249,8 @@ body {
 	border-bottom: .5rem solid var(--secondary-color);
 	width: 100%;
 }
+
+
 .ppp::-webkit-progress-bar {background-color: var(--primary-hover-background); width: 100%;}
 .ppp {background-color: var(--primary-hover-background);}
 
