@@ -137,8 +137,59 @@ main::-webkit-scrollbar {
     flex: 1;
 }
 
-.section#introduction .greeting {
-    font-size: 2rem;
+.section#introduction .banner {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
+
+.section#introduction .banner .pic {
+    position: relative;
+    margin: 2rem;
+
+}
+
+.section#introduction .banner .pic img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 1px dashed var(--primary-color);
+    stroke-dashoffset: 1rem;
+
+}
+
+.section#introduction .banner .pic .feature {
+    background-color: var(--primary-color);
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #000;
+}
+
+.section#introduction .banner .pic .feature h2 {
+    font-size: .9rem;
+}
+
+.section#introduction .banner .pic .feature p {
+    font-size: .8rem;
+}
+
+.section#introduction .banner .pic .feature:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: -1rem;
+}
+
+.section#introduction .banner .pic .feature:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: -2rem;
 }
 
 .section#introduction .social-list ul {
@@ -150,21 +201,27 @@ main::-webkit-scrollbar {
 .section#introduction .social-list ul li {
     margin-right: 1rem;
 }
+
 .section#introduction .social-list ul li.linkedin:hover {
     filter: invert(22%) sepia(42%) saturate(4997%) hue-rotate(185deg) brightness(102%) contrast(97%);
 }
+
 .section#introduction .social-list ul li.fb:hover {
     filter: invert(47%) sepia(75%) saturate(4898%) hue-rotate(202deg) brightness(93%) contrast(99%);
 }
+
 .section#introduction .social-list ul li.instagram:hover {
     filter: invert(30%) sepia(86%) saturate(7462%) hue-rotate(317deg) brightness(90%) contrast(114%);
 }
+
 .section#introduction .social-list ul li.x:hover {
     filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(83deg) brightness(105%) contrast(100%);
 }
+
 .section#introduction .social-list ul li.github:hover {
     filter: invert(100%) sepia(0%) saturate(19%) hue-rotate(83deg) brightness(105%) contrast(100%);
 }
+
 .section#introduction .social-list ul li.xbox:hover {
     filter: invert(31%) sepia(99%) saturate(556%) hue-rotate(76deg) brightness(91%) contrast(101%);
 }
@@ -207,7 +264,7 @@ main::-webkit-scrollbar {
     /* IE and Edge */
     scrollbar-width: none;
     justify-content: flex-start;
-    
+
 
 }
 
@@ -424,6 +481,7 @@ main::-webkit-scrollbar {
     transform: translate(-3.5rem, -3rem) rotate(0);
     /* transform: translate(-4rem, -3rem) rotate(336deg); */
 }
+
 .section#about .banner .line:nth-child(5) {
     transform: translate(8rem, 3rem) rotate(25deg);
 }
@@ -433,6 +491,7 @@ main::-webkit-scrollbar {
     transform: translate(2.125rem, 0rem) rotate(0);
     /* transform: translate(7rem, 0rem) rotate(-24deg); */
 }
+
 .section#about .banner .line:nth-child(6) {
     transform: translate(0rem, -5rem) rotate(270deg);
 }
@@ -489,6 +548,13 @@ a {
         font-size: 3rem;
     }
 
+    .section#introduction .banner {
+        flex-direction: row;
+    }
+    .section#introduction .banner .pic img {
+        height: 12rem;
+        width: 12rem;
+    }
     .skill_group_container {
         scroll-behavior: auto;
         scroll-snap-type: x none;
@@ -515,7 +581,7 @@ a {
     }
 
     .section#about .banner .line:nth-child(5) .stats {
-    
+
         transform: translate(7rem, 0rem) rotate(-24deg);
     }
 }
@@ -524,4 +590,32 @@ a {
     .section#about .banner {
         transform: scale(0.6);
     }
-  }
+}
+
+@media only screen and (max-height: 650px) {
+    .section#about .banner {
+        transform: scale(70%);
+    }
+}
+
+@media only screen and (max-height: 828px) {
+    .skill_group {
+        height: 9rem;
+    }
+
+    .skill_group p {
+        font-size: 1rem;
+    }
+
+    .skill_group ul li {
+        font-size: .8rem;
+    }
+
+    .skill_group ul li {
+        font-size: .8rem;
+    }
+
+    .exp-timeline {
+        transform: scale(90%) translateY(-3rem);
+    }
+}
