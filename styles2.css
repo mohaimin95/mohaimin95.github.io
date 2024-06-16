@@ -145,6 +145,14 @@ main::-webkit-scrollbar {
 
 }
 
+.section#introduction .greeting {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.section#introduction .banner .content {
+    animation: 1s popRight ease-in-out;
+}
+
 .section#introduction .banner .pic {
     position: relative;
     margin: 2rem;
@@ -159,6 +167,7 @@ main::-webkit-scrollbar {
     stroke-dashoffset: 1rem;
 
 }
+
 
 .section#introduction .banner .pic .feature {
     background-color: var(--primary-color);
@@ -192,6 +201,63 @@ main::-webkit-scrollbar {
     right: -2rem;
 }
 
+    
+.section#introduction .banner-img {
+    display: grid;
+    place-items: center;
+    padding: .5rem;
+    animation: 1s popLeft ease-in-out;
+}
+.section#introduction .banner-img img {
+    width: 85%;
+    /* height: 95%; */
+    animation: shapanim 20s infinite ease-in-out;
+
+    -webkit-filter: drop-shadow(5px 5px 0 var(--primary-color))
+    drop-shadow(-3px -3px 0 var(--primary-color));
+    filter: drop-shadow(5px 5px 0 var(--primary-color)) 
+    drop-shadow(-3px -3px 0 var(--primary-color));
+}
+.section#introduction .banner-img img:hover {
+    transition: 10s;
+    -webkit-filter: drop-shadow(5px 5px 0 var(--primary-color))
+    drop-shadow(-3px -3px 0 var(--primary-color)) grayscale(100%);
+    filter: drop-shadow(5px 5px 0 var(--primary-color)) 
+    drop-shadow(-3px -3px 0 var(--primary-color)) grayscale(100%);
+}
+@keyframes shapanim {
+    0% {
+        clip-path: polygon(0 0, 100% 1%, 77% 73%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 1%, 100% 100%, 20% 79%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 1%, 77% 73%, 0 100%);
+    }
+}
+@keyframes popLeft {
+    0% {
+       transform: translateX(25%);
+       opacity: 0; 
+    }
+    
+    100% {
+       transform: translateX(0);
+       opacity: 1; 
+    }
+}
+@keyframes popRight {
+    0% {
+       transform: translateX(-25%);
+       opacity: 0; 
+    }
+    
+    100% {
+       transform: translateX(0);
+       opacity: 1; 
+    }
+}
 .section#introduction .social-list ul {
     list-style: none;
     display: inline-flex;
@@ -281,7 +347,7 @@ main::-webkit-scrollbar {
 .skill_group_title {
     color: var(--primary-color);
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: .25rem;
 }
 
@@ -500,7 +566,16 @@ main::-webkit-scrollbar {
     transform: translate(6.5rem, -1rem) rotate(90deg);
 }
 
-
+.section#works .photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .section#works .photo img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
 /* essentials ====================== */
 
 .text-bold {
@@ -555,6 +630,7 @@ a {
         height: 12rem;
         width: 12rem;
     }
+
     .skill_group_container {
         scroll-behavior: auto;
         scroll-snap-type: x none;
@@ -592,9 +668,12 @@ a {
     }
 }
 
-@media only screen and (max-height: 650px) {
+@media only screen and (max-height: 670px) {
     .section#about .banner {
         transform: scale(70%);
+    }
+    .banner-img img {
+        width: 65% !important;
     }
 }
 
