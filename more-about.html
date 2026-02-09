@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More About Me | Abdul Mohaimin</title>
+    <meta name="description"
+        content="Detailed overview of my open source contributions, technical expertise, and community engagement.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .page-header {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .section-title-large {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .tech-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px -10px rgba(40, 233, 140, 0.1);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .os-card {
+            background: rgba(30, 30, 30, 0.6);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            transition: all 0.3s ease;
+        }
+
+        .os-card:hover {
+            background: rgba(40, 233, 140, 0.05);
+        }
+
+        .stat-badge {
+            background: rgba(40, 233, 140, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .back-link {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 100;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            border: 1px solid var(--glass-border);
+            color: var(--text-main);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="index.html#about" class="back-link">
+        <i class="las la-arrow-left"></i> Back
+    </a>
+
+    <main class="section">
+        <div class="page-header reveal">
+            <span class="section-title"><i class="las la-plus"></i> Extended Profile</span>
+            <h1 class="section-title-large">More About Me</h1>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto;">
+                Diving deeper into my technical expertise, open source contributions, and community involvement.
+            </p>
+        </div>
+
+        <!-- Technical Expertise -->
+        <section class="reveal">
+            <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                <i class="las la-microchip text-primary"></i> Core Expertise
+            </h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="lab la-node tech-icon"></i>
+                    <h3>Backend Architecture</h3>
+                    <p class="text-muted" style="margin-top: 1rem;">
+                        Specialized in building scalable microservices using **Node.js** and **NestJS**.
+                        Experienced in designing event-driven systems with **RabbitMQ** and **Kafka**.
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <i class="lab la-react tech-icon"></i>
+                    <h3>Frontend Engineering</h3>
+                    <p class="text-muted" style="margin-top: 1rem;">
+                        Expert in **React ecosystem** (Next.js, Redux, React Query).
+                        Focus on performance optimization, accessibility, and creating reusable component libraries.
+                    </p>
+                </div>
+
+                <div class="tech-card">
+                    <i class="lab la-docker tech-icon"></i>
+                    <h3>DevOps & Cloud</h3>
+                    <p class="text-muted" style="margin-top: 1rem;">
+                        Proficient in **Docker** containerization and **Kubernetes** orchestration.
+                        Hands-on experience with **AWS** (EC2, S3, Lambda) and **CI/CD** pipelines (GitHub Actions).
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source -->
+        <section class="reveal" style="margin-top: 6rem;">
+            <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
+                <i class="lab la-git-alt text-primary"></i> Open Source Contributions
+            </h2>
+
+            <a href="project-node-ts.html" style="text-decoration: none; color: inherit; display: block;">
+                <div class="os-card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                        <h3 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                            @mohaimin95/node-ts-generator <i class="las la-external-link-alt"
+                                style="font-size: 0.9em; opacity: 0.7;"></i>
+                        </h3>
+                        <span class="stat-badge">NPM Package</span>
+                    </div>
+                    <p class="text-muted">
+                        A CLI tool to generate production-ready Node.js & TypeScript backends with built-in best
+                        practices like Docker, ESLint, and Webpack.
+                    </p>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+                        <span class="text-primary"><i class="las la-code-branch"></i> maintained</span>
+                        <span class="text-muted"><i class="las la-star"></i> 500+ downloads</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Placeholder for future OSS -->
+            <div class="os-card">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                    <h3 style="margin: 0;">Community Templates</h3>
+                    <span class="stat-badge">GitHub</span>
+                </div>
+                <p class="text-muted">
+                    Maintained a collection of starter templates for React Native and Electron apps, helping developers
+                    kickstart their projects faster.
+                </p>
+                <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+                    <span class="text-primary"><i class="las la-users"></i> active</span>
+                </div>
+            </div>
+        </section>
+
+        <footer style="margin-top: 4rem; text-align: center;">
+            <p class="text-muted">&copy; 2026 Abdul Mohaimin. Made with ❤️ & ☕️</p>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            const scrollElements = document.querySelectorAll('.reveal');
+            scrollElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

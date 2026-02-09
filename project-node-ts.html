@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node TS Generator | Abdul Mohaimin</title>
+    <meta name="description"
+        content="A powerful CLI tool to generate production-ready Node.js TypeScript backends with built-in best practices.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Fira+Code&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        /* Page specific styles */
+        .project-hero {
+            padding-top: 8rem;
+            text-align: center;
+        }
+
+        .code-block {
+            background: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 12px;
+            font-family: 'Fira Code', monospace;
+            color: #a9b7c6;
+            margin: 2rem auto;
+            max-width: 600px;
+            text-align: left;
+            border: 1px solid var(--glass-border);
+            position: relative;
+        }
+
+        .code-command {
+            color: var(--primary-color);
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="brand">
+            <a href="index.html">
+                <img src="namc.png" alt="Abdul Mohaimin">
+            </a>
+        </div>
+        <ul class="menu-items">
+            <li><a href="index.html#introduction" title="Home"><i class="las la-home"
+                        style="transform: rotate(180deg);"></i></a></li>
+
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section project-hero">
+            <a href="index.html#projects" class="back-link reveal"><i class="las la-arrow-left"></i> Back to
+                Projects</a>
+
+            <div class="reveal">
+                <span class="section-title"><i class="las la-cube"></i> Open Source</span>
+                <h1 class="hero-title">Node TS Generator</h1>
+                <p class="text-muted" style="max-width: 700px; margin: 0 auto 2rem;">
+                    A CLI tool to instantly scaffold a production-ready Node.js & TypeScript backend.
+                    Built with clean architecture, strict linting, and Docker support out of the box.
+                </p>
+
+                <div class="code-block">
+                    <span style="color: #569cd6;">npx</span> <span
+                        class="code-command">@mohaimin95/node-ts-generator</span> init &lt;app-name&gt;
+                </div>
+
+                <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                    <a href="https://www.npmjs.com/package/@mohaimin95/node-ts-generator" target="_blank"
+                        class="skill-tag"
+                        style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="lab la-npm" style="font-size: 1.2rem;"></i> View on NPM
+                    </a>
+                    <a href="https://github.com/mohaimin95/node-ts-generator" target="_blank" class="skill-tag"
+                        style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="lab la-github" style="font-size: 1.2rem;"></i> View Source
+                    </a>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card reveal">
+                    <i class="las la-folder-open feature-icon"></i>
+                    <h3>Structured Scaffolding</h3>
+                    <p class="text-muted">Predefined folder structure following industry best practices for scalable
+                        Node.js applications.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <i class="lab la-js-square feature-icon"></i>
+                    <h3>TypeScript & Path Alias</h3>
+                    <p class="text-muted">Fully configured TypeScript with path aliases (@app/...) for cleaner imports
+                        and better maintainability.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <i class="las la-check-circle feature-icon"></i>
+                    <h3>Linting & Formatting</h3>
+                    <p class="text-muted">ESLint and Prettier pre-configured to ensure code quality and consistency from
+                        day one.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <i class="lab la-docker feature-icon"></i>
+                    <h3>Docker Ready</h3>
+                    <p class="text-muted">Includes a Dockerfile optimized for production, making containerization
+                        seamless.</p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <i class="las la-rocket feature-icon"></i>
+                    <h3>Webpack Build</h3>
+                    <p class="text-muted">Uses Webpack for bundling, ensuring optimized and efficient production builds.
+                    </p>
+                </div>
+
+                <div class="feature-card reveal">
+                    <i class="las la-bug feature-icon"></i>
+                    <h3>VSCode Debugging</h3>
+                    <p class="text-muted">Ready-to-use launch.json for a smooth debugging experience directly in VSCode.
+                    </p>
+                </div>
+            </div>
+
+            <footer>
+                <p>&copy; 2026 Abdul Mohaimin. Made with ❤️ & ☕️</p>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            const scrollElements = document.querySelectorAll('.reveal');
+            scrollElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>

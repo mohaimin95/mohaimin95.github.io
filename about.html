@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Abdul Mohaimin</title>
+    <meta name="description"
+        content="The story behind Abdul Mohaimin - From a curious student in Madukkur to a Lead Engineer in Bangalore.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <link rel="stylesheet" href="styles2.css">
+    <style>
+        .about-hero {
+            padding-top: 6rem;
+        }
+
+        .story-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .story-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .story-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .edu-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-left: 3px solid var(--primary-color);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            transition: color 0.3s;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            color: var(--primary-color);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .tech-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 10px 30px -10px rgba(40, 233, 140, 0.1);
+        }
+
+        .tech-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .os-card {
+            background: rgba(30, 30, 30, 0.6);
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            transition: all 0.3s ease;
+        }
+
+        .os-card:hover {
+            background: rgba(40, 233, 140, 0.05);
+        }
+
+        .stat-badge {
+            background: rgba(40, 233, 140, 0.1);
+            color: var(--primary-color);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <div class="mobile-menu-btn" role="button" aria-label="Toggle Navigation">
+        <i class="las la-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="brand">
+            <a href="index.html">
+                <img src="namc.png" alt="Abdul Mohaimin">
+            </a>
+        </div>
+        <ul class="menu-items">
+            <li><a href="index.html#introduction" title="Home"><i class="las la-home"
+                        style="transform: rotate(180deg);"></i></a></li>
+
+            <li><a href="about.html" class="active" title="About"><i class="las la-user"
+                        style="transform: rotate(180deg);"></i></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <section class="section about-hero">
+            <a href="index.html#about" class="back-link reveal"><i class="las la-arrow-left"></i> Back to Home</a>
+
+            <div class="section-header reveal">
+                <span class="section-title"><i class="las la-user"></i> My Story</span>
+            </div>
+
+            <div class="story-container reveal">
+                <h1 class="hero-title">From <span class="text-primary">Curiosity</span> to Code</h1>
+
+                <div class="story-text">
+                    <p>
+                        I hail from the quaint town of <strong>Madukkur in Tamil Nadu</strong>. Growing up, I often
+                        heard people say that everyone should possess at least one talent. This sparked a sense of
+                        curiosity and excitement within me, driving me to discover my own unique skill.
+                    </p>
+                    <p>
+                        One day, I asked a friend why he sacrificed weekends for C++ classes. He showed me a simple
+                        project—tracking his family's milk expenses. That small utility app ignited a spark within me.
+                        <span class="highlight">Why just use software when I could build it?</span>
+                    </p>
+                    <p>
+                        Determined to learn, I wrote my first program to calculate exam cutoff marks. The thrill of
+                        seeing code solve a real-world problem hooked me instantly. This led me to pursue a
+                        <strong>B.Tech in Information Technology</strong> at Aalim Muhammed Salegh College of
+                        Engineering, Chennai.
+                    </p>
+
+                    <div class="edu-card">
+                        <h4><i class="las la-graduation-cap"></i> Education</h4>
+                        <p class="text-muted" style="margin-top: 0.5rem;">
+                            Bachelor's Degree in Information Technology<br>
+                            <span style="font-size: 0.9rem;">Aalim Muhammed Salegh College of Engineering,
+                                Chennai</span>
+                        </p>
+                    </div>
+
+                    <p>
+                        Realizing that technical prowess wasn't enough, I worked hard on my communication skills—even
+                        watching animated movies in their original English audio! On <strong>September 11,
+                            2017</strong>, I moved to Bangalore. By the 14th, I had joined my first company.
+                    </p>
+                    <p>
+                        Since then, it's been a non-stop journey of learning. From mastering the <strong>MEAN
+                            stack</strong> to diving into <strong>Microservices</strong> and <strong>Cloud
+                            Architecture</strong>, I've evolved from a junior developer to a Lead Engineer. I love
+                        bridging the gap between complex backend logic and beautiful frontend experiences.
+                    </p>
+
+                    <p>
+                        Currently, I'm focusing on <span class="highlight">Lead Engineering</span> at Thoughtfocus,
+                        mentoring teams, and architecting scalable solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-header reveal" style="margin-top: 4rem;">
+                <span class="section-title"><i class="las la-chart-pie"></i> At a Glance</span>
+            </div>
+
+            <!-- Bento Grid from Index -->
+            <div class="bento-grid">
+                <div class="bento-item large reveal">
+                    <img src="./assets/images/compressed.jpeg" alt="Abdul Mohaimin Profile">
+                </div>
+
+                <div class="bento-item bento-text reveal">
+                    <h4>Beyond the Code</h4>
+                    <p>
+                        You'll find me active on LinkedIn sharing tech insights. OFF-KEYBOARD, I'm likely gaming—diving
+                        into the world of <strong>Red Dead Redemption 2</strong> or cooking up chaos in
+                        <strong>Overcooked</strong>.
+                    </p>
+                </div>
+
+                <div class="bento-item reveal">
+                    <h3>1.7k+</h3>
+                    <p>LinkedIn Connections</p>
+                </div>
+
+                <div class="bento-item reveal">
+                    <h3>17+</h3>
+                    <p>Major Projects</p>
+                </div>
+
+                <div class="bento-item reveal">
+                    <h3>200+</h3>
+                    <p>Code Reviews</p>
+                </div>
+
+                <div class="bento-item reveal">
+                    <h3>100+</h3>
+                    <p>Interviews Taken</p>
+                </div>
+            </div>
+
+            <!-- Technical Expertise -->
+            <section class="reveal" style="margin-top: 6rem;">
+                <div class="section-header">
+                    <span class="section-title"><i class="las la-microchip"></i> Core Expertise</span>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <i class="lab la-node tech-icon"></i>
+                        <h3>Backend Architecture</h3>
+                        <p class="text-muted" style="margin-top: 1rem;">
+                            Specialized in building scalable microservices using <strong>Node.js</strong> and
+                            <strong>NestJS</strong>.
+                            Experienced in designing event-driven systems with <strong>RabbitMQ</strong> and
+                            <strong>Kafka</strong>.
+                        </p>
+                    </div>
+
+                    <div class="tech-card">
+                        <i class="lab la-react tech-icon"></i>
+                        <h3>Frontend Engineering</h3>
+                        <p class="text-muted" style="margin-top: 1rem;">
+                            Expert in <strong>React ecosystem</strong> (Next.js, Redux, React Query).
+                            Focus on performance optimization, accessibility, and creating reusable component libraries.
+                        </p>
+                    </div>
+
+                    <div class="tech-card">
+                        <i class="lab la-docker tech-icon"></i>
+                        <h3>DevOps & Cloud</h3>
+                        <p class="text-muted" style="margin-top: 1rem;">
+                            Proficient in <strong>Docker</strong> containerization and <strong>Kubernetes</strong>
+                            orchestration.
+                            Hands-on experience with <strong>AWS</strong> (EC2, S3, Lambda) and <strong>CI/CD</strong>
+                            pipelines (GitHub Actions).
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Open Source -->
+            <section class="reveal">
+                <div class="section-header">
+                    <span class="section-title"><i class="lab la-git-alt"></i> Open Source</span>
+                </div>
+
+                <a href="project-node-ts.html" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="os-card">
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                            <h3 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                                @mohaimin95/node-ts-generator <i class="las la-external-link-alt"
+                                    style="font-size: 0.9em; opacity: 0.7;"></i>
+                            </h3>
+                            <span class="stat-badge">NPM Package</span>
+                        </div>
+                        <p class="text-muted">
+                            A CLI tool to generate production-ready Node.js & TypeScript backends with built-in best
+                            practices like Docker, ESLint, and Webpack.
+                        </p>
+                        <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+                            <span class="text-primary"><i class="las la-code-branch"></i> maintained</span>
+                            <span class="text-muted"><i class="las la-star"></i> 500+ downloads</span>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="os-card">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem;">
+                        <h3 style="margin: 0;">Community Templates</h3>
+                        <span class="stat-badge">GitHub</span>
+                    </div>
+                    <p class="text-muted">
+                        Maintained a collection of starter templates for React Native and Electron apps, helping
+                        developers kickstart their projects faster.
+                    </p>
+                    <div style="margin-top: 1rem; display: flex; gap: 1rem; font-size: 0.9rem;">
+                        <span class="text-primary"><i class="las la-users"></i> active</span>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>&copy; 2026 Abdul Mohaimin. Made with ❤️ & ☕️</p>
+            </footer>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Menu Toggle
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                    const icon = menuBtn.querySelector('i');
+                    if (nav.classList.contains('active')) {
+                        icon.classList.remove('la-bars');
+                        icon.classList.add('la-times');
+                    } else {
+                        icon.classList.remove('la-times');
+                        icon.classList.add('la-bars');
+                    }
+                });
+            }
+
+            // Scroll Animation
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            const scrollElements = document.querySelectorAll('.reveal');
+            scrollElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
