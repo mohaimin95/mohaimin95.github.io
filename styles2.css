@@ -563,7 +563,7 @@ footer {
 
 @media (max-width: 768px) {
     :root {
-        --nav-width: 3.5rem;
+        --nav-width: 3rem;
     }
 
     /* Hide mobile menu button */
@@ -579,25 +579,28 @@ footer {
         /* Reset vertical text */
         transform: none;
         /* Reset rotation */
-        padding: 0.8rem 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
+        height: 3rem;
         position: relative;
     }
 
     ul.menu-items li a.active::after {
         content: '';
         position: absolute;
-        right: 6px;
+        right: -2px;
+        /* Overlap border for integrated look */
+        left: auto;
         top: 50%;
         transform: translateY(-50%);
         width: 5px;
         height: 5px;
         background: var(--primary-color);
         border-radius: 50%;
-        box-shadow: 0 0 8px var(--primary-color);
+        box-shadow: 0 0 5px var(--primary-color);
     }
 
     ul.menu-items li a i {
@@ -607,22 +610,28 @@ footer {
         /* Remove margin */
         transform: none !important;
         /* Reset icon rotation if needed */
+        line-height: 1;
+        display: block;
     }
 
     /* Adjust brand size for compact sidebar */
     .brand {
-        width: 2.2rem;
-        height: 2.2rem;
+        width: 2rem;
+        height: 2rem;
         margin-bottom: 2rem;
     }
 
-    /* Main content will automatically adjust margin-left based on --nav-width from desktop styles */
     main {
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 
     .section {
-        padding: 3rem 1rem;
+        padding: 2rem 0.5rem;
+    }
+
+    footer {
+        margin-top: 3rem !important;
+        padding-top: 1.5rem !important;
     }
 
     h1.hero-title {
