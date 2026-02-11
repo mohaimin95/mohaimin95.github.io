@@ -47,6 +47,11 @@
             <li><a href="#about"><i class="las la-user" style="transform: rotate(180deg); margin-bottom: 5px;"></i>
                     About</a></li>
         </ul>
+
+        <!-- Theme Toggle -->
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+            <i class="las la-sun"></i>
+        </button>
     </nav>
 
     <!-- Main Content -->
@@ -371,6 +376,26 @@
             });
 
             sections.forEach(section => navObserver.observe(section));
+
+            // Theme Toggle Logic
+            const themeBtn = document.getElementById('theme-toggle');
+            if (themeBtn) {
+                const themeIcon = themeBtn.querySelector('i');
+                const savedTheme = localStorage.getItem('theme');
+                const systemPref = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+                if (savedTheme === 'light' || (!savedTheme && systemPref === 'light')) {
+                    document.body.classList.add('light-mode');
+                    themeIcon.className = 'las la-moon';
+                }
+
+                themeBtn.addEventListener('click', () => {
+                    document.body.classList.toggle('light-mode');
+                    const isLight = document.body.classList.contains('light-mode');
+                    themeIcon.className = isLight ? 'las la-moon' : 'las la-sun';
+                    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+                });
+            }
         });
     </script>
 </body>

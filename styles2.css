@@ -751,3 +751,58 @@ footer {
         opacity: 0.7;
     }
 }
+
+/* ============ Theme Toggle ============ */
+.theme-toggle {
+    margin-top: auto;
+    background: transparent;
+    border: 1px solid var(--glass-border);
+    color: var(--secondary-color);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    align-self: center;
+    /* Prevent stretching */
+}
+
+.theme-toggle:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    background: rgba(var(--primary-rgb), 0.1);
+    transform: rotate(15deg);
+}
+
+/* Light Mode Overrides */
+body.light-mode {
+    --bg-dark: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-card-rgb: 255, 255, 255;
+    --text-main: #1a202c;
+    --text-muted: #4a5568;
+    --secondary-color: #718096;
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --glass-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Specific component tweaks for light mode if needed */
+body.light-mode .timeline-date {
+    background: rgba(var(--primary-rgb), 0.1);
+}
+
+body.light-mode .skill-tag {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .os-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary-color);
+}
