@@ -806,3 +806,25 @@ body.light-mode .os-card {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-left: 4px solid var(--primary-color);
 }
+
+body.light-mode .timeline-content h4 {
+    color: var(--text-main);
+}
+
+body.light-mode .timeline-content h5 {
+    color: var(--secondary-color);
+}
+
+body.light-mode .social-list a img {
+    filter: invert(0) brightness(0.4);
+    opacity: 0.6;
+}
+
+body.light-mode .social-list a:hover img {
+    opacity: 1;
+    filter: invert(66%) sepia(63%) saturate(464%) hue-rotate(88deg) brightness(98%) contrast(88%);
+}
+
+body.light-mode .bento-text h4 {
+    color: var(--text-main);
+}
